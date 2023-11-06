@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <input type="number" name="number" id="number1" placeholder="number 1">
+        </li>
+        <li>
+            <input type="number" name="number" id="number 2" placeholder="number 2">
+        </li>
+        <li>
+            <button>add</button>
+        </li>
+        <li>
+            <p></p>
+        </li>
+    </ul>
+</body>
+<script>
+    const input = document.querySelectorAll('input[type="number"]')
+    const para = document.querySelector('p')
+    const btn = document.querySelector('button')
+
+    btn.addEventListener('click', add)
+
+    function add(){
+        const num1 = input[0].value -0
+        const num2 = input[1].value -0
+
+        return para.textContent = num1 + num2
+    }
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Which year were you born?</h2>
+    <p></p>
+</body>
+
+<script>
+    // const yearOfBirth = prompt('What year were you born?')
+    // const currentYear = new Date().getFullYear()
+    const english = parseFloat(prompt('Your score in English'))
+    const maths = parseFloat(prompt('Your score in Maths'))
+    let average = (english + maths) / 2
+    let remark
+
+    average >= 70 ? remark('Excellent') :
+    average >= 60 ? remark('Very Good') :
+    average >= 50 ? remark('Good') : remark('Fail');
+
+    alert(remark)
+    
+   
+
+
+    // let status 
+    // let status2
+
+
+
+    // currentYear - yearOfBirth >= 18 ? status = 'You are old enough to vote' : status = 'Too young to vote'
+
+    // yearOfBirth >= 2000 ? status2 = 'Gen Z' :
+    // yearOfBirth >= 1990 ? status2 = 'Millenial' :
+    // yearOfBirth >= 1980 ? status2 = 'Gen X' : status2 = 'Ancients'
+
+
+    document.querySelector('p').innerHTML = status2
+</script>
+</html>
