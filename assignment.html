@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Assignment</title>
+</head>
+<body>
+    <h1>Color Changer</h1>
+    <section id="color-box">
+        <input type="text" id="color-input" placeholder="Enter a color">
+    </section>
+    <button id="change-color">Change Color</button>
+
+</body>
+<script>
+
+    const changeColor = document.getElementById("change-color")
+    const colorBox = document.getElementById("color-box")
+    const colorInput = document.getElementById("color-input")
+
+
+    changeColor.addEventListener("click", function() {
+        const enteredColor = colorInput.value.toLowerCase()
+        const backgroundColor = enteredColor == "red" ? "red" : 
+                            enteredColor == "blue" ? "blue" :
+                            enteredColor == "green" ? "green" : "white"
+
+        // const message = enteredColor == "red" ? "red" : 
+        //                 enteredColor == "blue" ? "blue" : 
+        //                 enteredColor == "green" ? "green" : "Invalid color"
+
+        colorBox.style.backgroundColor = backgroundColor
+        colorBox.textContent = message
+    })
+</script>
+</html>

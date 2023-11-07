@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dom Assignment</title>
 </head>
 <body>
-    
+    <h1>Color Changer</h1>
+    <section id="color-box">
+        <input type="text" name="color-input" id="color-input" placeholder="Enter a color">
+    </section>
+    <button id="change-color">Change Color</button>
 </body>
+<script>
+    const changeColor = document.getElementById("change-color");
+    const colorBox = document.getElementById("color-box");
+    const colorInput = document.getElementById("color-input");
+
+    changeColor.addEventListener("click", function() {
+        const selectedColor = colorInput.value.toLowerCase();
+        const backgroundColor = selectedColor == "red" ? "red" : 
+                            selectedColor == "blue" ? "blue" :
+                            selectedColor == "green" ? "green" : "white";
+
+        const message = selectedColor == "red" ? "red" : 
+                        selectedColor == "blue" ? "blue" : 
+                        selectedColor == "green" ? "green" : "Invalid color";
+
+        colorBox.style.backgroundColor = backgroundColor;
+        colorBox.textContent = message;
+    });
+</script>
 </html>
