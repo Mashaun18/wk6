@@ -23,14 +23,24 @@
 
     function changeColor(){
         let color = colorInput.value
+        color = color.toLowerCase()
+        let bcolor
 
-        return colorBox.style.background = color
+        
+        color == "red" ? bcolor = 'red' :
+        color == "blue" ? bcolor = 'blue' :
+        color == "green" ? bcolor = 'green' : 
+        (colorInput.value= "Invalid")
+
+
+        return colorBox.style.background = bcolor
     }
 
 
-    colorInput = "red" ? color = 'red' :
-    colorInput = "blue" ? color = 'blue' :
-    colorInput = "green" ? color = 'green' : color.textContent= "invalid"
+    
+
+
+   
 
    
 </script>
