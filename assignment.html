@@ -7,31 +7,31 @@
 </head>
 <body>
     <h1>Color Changer</h1>
-    <section id="color-box">
+    <section id="color-box" style="height: 200px; width: 200px;">
         <input type="text" id="color-input" placeholder="Enter a color">
     </section>
-    <button id="change-color">Change Color</button>
+    <button>Change Color</button>
 
 </body>
 <script>
 
-    const changeColor = document.getElementById("change-color")
+    const btn = document.querySelector("button")
     const colorBox = document.getElementById("color-box")
     const colorInput = document.getElementById("color-input")
 
+    btn.addEventListener('click', changeColor)
 
-    changeColor.addEventListener("click", function() {
-        const enteredColor = colorInput.value.toLowerCase()
-        const backgroundColor = enteredColor == "red" ? "red" : 
-                            enteredColor == "blue" ? "blue" :
-                            enteredColor == "green" ? "green" : "white"
+    function changeColor(){
+        let color = colorInput.value
 
-        // const message = enteredColor == "red" ? "red" : 
-        //                 enteredColor == "blue" ? "blue" : 
-        //                 enteredColor == "green" ? "green" : "Invalid color"
+        return colorBox.style.background = color
+    }
 
-        colorBox.style.backgroundColor = backgroundColor
-        colorBox.textContent = message
-    })
+
+    colorInput = "red" ? color = 'red' :
+    colorInput = "blue" ? color = 'blue' :
+    colorInput = "green" ? color = 'green' : color.textContent= "invalid"
+
+   
 </script>
 </html>
