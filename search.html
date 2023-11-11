@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Search Items</h1>
+    <input type="text" name="Items" id="items" placeholder="search item">
+    <button>Search item</button>
+    <ol></ol>
+</body>
+
+<script>
+
+    const ol = document.querySelector('ol')
+
+    const btn = document.querySelector('button')
+
+    const input = document.querySelector('input')
+    
+    let arrOfItems = new Array()
+
+    function addItem(){
+        const item = input.value
+
+
+        arrOfItems.unshift(item)
+
+
+        for(let item of arrOfItems){
+        const list = document.createElement('li')
+        ol.appendChild(list)
+        list.innerHTML = item
+    }
+
+
+        // return alert(item)
+        console.log(arrOfItems)
+    }
+
+    btn.addEventListener('click', addItem)
+</script>
+</html>

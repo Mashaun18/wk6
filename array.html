@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>
+        Front-End 6B6 Students
+    </h1>
+    <ol>
+
+    </ol>
+</body>
+<script>
+    let F6B6 = 'Korede Sylvester Joseph Joba Dimeji Omolade Ore Daniel Victor Tolu Munir Chibuike Shola Ismail'
+    const ol = document.querySelector('ol')
+    const students = F6B6.split(' ')
+
+    students.push('Martins', 'Jims') // push to add to something
+    const old = ['ini', 'michael']
+    students.push(...old)  //the elipses i.e three dots destructure it
+   
+    students.pop()   //pop remove the last from the list
+   
+    students.shift()  //shift removes the first from the list
+   
+    students.unshift('Jim')   //unshift is used to add to the top of an array
+    
+    students[11] = 'chukwunwike'   // here we changed the name by using index i.e the braces []
+   
+    students.splice(8,0,'korede')   // splice does three things, to add, to remove, to add and remove at sametime.   the zero(0) means no deletion and the 8 gives the position we want it to be
+    
+    students.splice(10, 2)  //in this case we remove two students starting from the indicated index
+    
+    students.splice(students.indexOf('jim'), 1, 'tolu', 'munir') // here, the 1 removes the student at the index of 0 (note that the index starts counting from zero, so here we refer to the first student), and then add tolu and munir. 
+    
+    students.splice(students.lastIndexOf('jims'), 2)  //this removes the lastindexOf from where we have Jims
+    
+    const five = students.slice(0,5)
+
+    const vowels = five.filter(name => name.startsWith('a') || name.startsWith('e') || name.startsWith('i') || name.startsWith('o') || name.startsWith('u') )
+
+    function cap(str){
+        str = str.toLowerCase()
+        str = str.replace(str[0], str[0].toUpperCase())
+        return str
+    }
+
+    const six = five.map(cap)
+
+    const startO = five.filter(name => name[0] === 'j')
+
+    five.sort()
+    five.reverse()
+
+    
+
+    for(let student of vowels){
+        const list = document.createElement('li')
+        ul.append(list)
+        list.textContent = student
+    }
+    
+
+    console.log(students)
+
+</script>
+</html>
