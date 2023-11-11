@@ -35,7 +35,7 @@ function filterArray(array, condition){
 }
 
 const arrayFiltered = filterArray(arr, (num) => num % 2 == 0)
-allResult("Array Filtered (even numbers only):", arrayFiltered)
+allResult("Array Filtered(even numbers):", arrayFiltered)
 
 
 function positiveNumbers(array){
