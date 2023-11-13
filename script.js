@@ -32,9 +32,9 @@ allResult("Minimum Value:", min)
 
 function filterArray(array, condition){
     return array.filter(condition)
-}
+}  
 
-const arrayFiltered = filterArray(arr, (num) => num % 2 == 0)
+const arrayFiltered = filterArray(arr, (num) => num % 2 == 1)
 allResult("Array Filtered(even numbers):", arrayFiltered)
 
 
